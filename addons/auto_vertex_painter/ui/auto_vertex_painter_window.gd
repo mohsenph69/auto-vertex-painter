@@ -189,9 +189,13 @@ func make_mesh(data:Array,colors:PackedColorArray):
 			bytes.push_back(c.b*255)
 			bytes.push_back(c.a*255)
 		data[type] = bytes
-	var res_path:String = current_mesh.mesh.resource_path
 	var new:=ArrayMesh.new()
-	new.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,data)
+	for i in range(0,current_mesh.mesh.get_surface_count()):
+		if i == surface_index.value:
+			new.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,data)
+		else:
+			var _d = current_mesh.mesh.surface_get_arrays(i)
+			new.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,_d)
 	current_mesh.mesh = new
 
 
