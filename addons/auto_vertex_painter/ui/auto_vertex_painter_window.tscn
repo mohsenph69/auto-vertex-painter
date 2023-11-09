@@ -1,0 +1,227 @@
+[gd_scene load_steps=2 format=3 uid="uid://csmiqlffg3v67"]
+
+[ext_resource type="Script" path="res://addons/auto_vertex_painter/ui/auto_vertex_painter_window.gd" id="1_27ktv"]
+
+[node name="auto_vertex_painter_window" type="Window"]
+initial_position = 2
+size = Vector2i(440, 420)
+script = ExtResource("1_27ktv")
+metadata/_edit_vertical_guides_ = [146.0]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="current_mesh" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Current Mesh : NULL"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Color A"
+
+[node name="colorA" type="ColorPickerButton" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "color A"
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Color B"
+
+[node name="colorB" type="ColorPickerButton" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Color B"
+
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "surf index"
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="ll" type="Label" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Type"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+item_count = 5
+selected = 0
+popup/item_0/text = "ARRAY_COLOR"
+popup/item_0/id = 0
+popup/item_1/text = "ARRAY_CUSTOM0"
+popup/item_1/id = 1
+popup/item_2/text = "ARRAY_CUSTOM1"
+popup/item_2/id = 2
+popup/item_3/text = "ARRAY_CUSTOM2"
+popup/item_3/id = 3
+popup/item_4/text = "ARRAY_CUSTOM3"
+popup/item_4/id = 4
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+
+[node name="global" type="CheckBox" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "global"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="fill_color_btn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Fill with Color A"
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="ll" type="Label" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "Interpolation"
+
+[node name="interpolation" type="OptionButton" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+item_count = 3
+selected = 0
+popup/item_0/text = "linear"
+popup/item_0/id = 0
+popup/item_1/text = "smoothstep"
+popup/item_1/id = 1
+popup/item_2/text = "step"
+popup/item_2/id = 2
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+
+[node name="ll2" type="Label" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "From"
+
+[node name="from_pos" type="OptionButton" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+item_count = 6
+selected = 0
+popup/item_0/text = "bottom2top"
+popup/item_0/id = 1
+popup/item_1/text = "top2bottom"
+popup/item_1/id = 2
+popup/item_2/text = "left2right"
+popup/item_2/id = 3
+popup/item_3/text = "right2left"
+popup/item_3/id = 4
+popup/item_4/text = "front2back"
+popup/item_4/id = 5
+popup/item_5/text = "back2front"
+popup/item_5/id = 6
+
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="ll" type="Label" parent="VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+text = "End Point (one means furthest point)"
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+text = "1"
+
+[node name="interpolate_btn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "interpolate the color"
+
+[node name="HSeparator4" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="x" type="LineEdit" parent="VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "0"
+placeholder_text = "x"
+
+[node name="y" type="LineEdit" parent="VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "1"
+placeholder_text = "y"
+
+[node name="z" type="LineEdit" parent="VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "0"
+placeholder_text = "z"
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+
+[node name="end" type="Label" parent="VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+text = " End Angle"
+
+[node name="end_angle" type="LineEdit" parent="VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+text = "180"
+
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+
+[node name="interpolation" type="Label" parent="VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+
+[node name="ll" type="Label" parent="VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+text = "Interpolation"
+
+[node name="angle_interpolate" type="OptionButton" parent="VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+item_count = 3
+selected = 0
+popup/item_0/text = "linear"
+popup/item_0/id = 0
+popup/item_1/text = "smoothstep"
+popup/item_1/id = 1
+popup/item_2/text = "step"
+popup/item_2/id = 2
+
+[node name="normal_btn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Intepolate base on normal angle"
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="pressed" from="VBoxContainer/fill_color_btn" to="." method="_on_fill_color_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/interpolate_btn" to="." method="_on_interpolate_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/normal_btn" to="." method="_on_normal_btn_pressed"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6met1xla45fg"]
+
+[ext_resource type="Script" path="res://addons/auto_vertex_painter/ui/auto_vertex_painter_dock.gd" id="1_k1iea"]
+
+[node name="auto_vertex_painter_dock" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k1iea")
+
+[node name="v_paint" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "V Paint"
